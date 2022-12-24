@@ -1,0 +1,21 @@
+{
+  "name": "test-hue-playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khiemdt/test-hue-playwright.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khiemdt/test-hue-playwright/issues"
+  },
+  "homepage": "https://github.com/khiemdt/test-hue-playwright#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.29.1"
+  }
+}
