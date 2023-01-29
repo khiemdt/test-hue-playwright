@@ -40,3 +40,12 @@ export const useNamePassCase: UserInfo[] = [
         result: 'Mật khẩu không hợp lệ',
     },
 ];
+
+export async function setCookieVals() {
+
+    const cookies = [
+        {name:"ACCESS_TOKEN", value:"33b3dc0b-81f5-4ba8-bbe5-e8b94fc71312"},
+    ]
+
+    return cookies;
+}
