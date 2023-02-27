@@ -17,5 +17,8 @@
   "homepage": "https://github.com/khiemdt/test-hue-playwright#readme",
   "devDependencies": {
     "@playwright/test": "^1.29.1"
+  },
+  "dependencies": {
+    "crypto-js": "^4.1.1"
   }
 }

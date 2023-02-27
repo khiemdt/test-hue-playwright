@@ -1,5 +1,15 @@
 import type { PlaywrightTestConfig } from '@playwright/test';
 import { devices } from '@playwright/test';
+import CryptoJS from 'crypto-js';
+
+export const getAppHash = () => {
+    let timeStamp = new Date().getTime();
+    timeStamp = timeStamp / 1000 - ((timeStamp / 1000) % 300);
+    let str = `${timeStamp}:123axxafafacaxxaf1`;
+    const hash = CryptoJS.SHA256(str);
+    const hashStr = CryptoJS.enc.Base64.stringify(hash);
+    return hashStr;
+};
 
 /**
  * Read environment variables from file.
@@ -35,14 +45,14 @@ const config: PlaywrightTestConfig = {
     use: {
         /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
         actionTimeout: 0,
-        baseURL: 'https://apis.dev.tripi.vn',
+        baseURL: 'https://dev-api.tripi.vn/',
         /* Base URL to use in actions like `await page.goto('/')`. */
         // baseURL: 'http://localhost:3000',
         extraHTTPHeaders: {
             // We set this header per GitHub guidelines.
             Accept: 'application/vnd.github.v3+json',
             ['login-token']: '201dd8d7-3f31-4a78-8aff-2f9a88c4932c',
-            apphash: '5S5n6eHMDYxD820dtd4kSt5ZUGtJCOozQ0XCBZK2hQE=',
+            apphash: getAppHash(),
             appid: 'csp_portal',
             ['ca-id']: '1',
             version: '1.0',
