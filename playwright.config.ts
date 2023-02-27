@@ -5,7 +5,7 @@ import CryptoJS from 'crypto-js';
 export const getAppHash = () => {
     let timeStamp = new Date().getTime();
     timeStamp = timeStamp / 1000 - ((timeStamp / 1000) % 300);
-    let str = `${timeStamp}:123axxafafacaxxaf1`;
+    let str = `${timeStamp}:740fa3ca-6a14-4863-8589-f3926417a6701`;
     const hash = CryptoJS.SHA256(str);
     const hashStr = CryptoJS.enc.Base64.stringify(hash);
     return hashStr;
@@ -45,17 +45,18 @@ const config: PlaywrightTestConfig = {
     use: {
         /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
         actionTimeout: 0,
-        baseURL: 'https://dev-api.tripi.vn/',
+        baseURL: 'https://gate.dev.tripi.vn',
         /* Base URL to use in actions like `await page.goto('/')`. */
         // baseURL: 'http://localhost:3000',
         extraHTTPHeaders: {
             // We set this header per GitHub guidelines.
             Accept: 'application/vnd.github.v3+json',
-            ['login-token']: '201dd8d7-3f31-4a78-8aff-2f9a88c4932c',
+            ['login-token']: 'bd17ff59-2fcb-4895-8c44-7992e112158a',
             apphash: getAppHash(),
-            appid: 'csp_portal',
+            appid: 'partner_web',
             ['ca-id']: '1',
             version: '1.0',
+            ['content-type']: 'application/json',
             // Add authorization token to all requests.
             // Assuming personal access token available in the environment.
             // Authorization: `token ${process.env.API_TOKEN}`,
