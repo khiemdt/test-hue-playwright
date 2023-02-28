@@ -63,3 +63,48 @@ export async function setCookieVals() {
 
     return cookies;
 }
+
+export const bookingRequest = {
+    adults: 2,
+    checkIn: '29-03-2023',
+    checkOut: '01-04-2023',
+    children: 0,
+    hotelId: 48644,
+    rooms: 1,
+    childrenAges: [],
+};
+
+export const initPage = {
+    page: 1,
+    size: 10,
+    useBasePrice: false,
+};
+
+export const bookingParrams = {
+    customer: {
+        address: 'Hồ Chí Minh',
+        email: 'hapt.it@tripi.vn',
+        name: 'Phạm Hà 245721 ',
+        phoneNumber: '0854328940',
+    },
+    invoiceRequest: false,
+    isFinal: true,
+    pnr: '',
+};
+
+export const contact = {
+    checkInHour: '',
+    checkOutHour: '',
+    contactEmail: 'hapt.it@tripi.vn',
+    contactName: 'Khiêm đep trai',
+    phoneNumber: '0974091294',
+};
+
+export const paymentInfo = {
+    "creditPassword": "1234",
+    "paymentMethodId": 7,
+    "paymentMethodCode": "CD",
+    "promotionCode": "",
+    "point": 0,
+    "saveToken": false
+};

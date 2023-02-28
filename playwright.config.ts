@@ -56,7 +56,8 @@ const config: PlaywrightTestConfig = {
             appid: 'partner_web',
             ['ca-id']: '1',
             version: '1.0',
-            ['content-type']: 'application/json',
+            ['Content-Type']: 'application/json',
+            ['payment-version']: '2',
             // Add authorization token to all requests.
             // Assuming personal access token available in the environment.
             // Authorization: `token ${process.env.API_TOKEN}`,
