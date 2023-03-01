@@ -161,7 +161,7 @@ test.describe('Luồng booking sử dụng api', () => {
             const paymentref = await payment.json();
             if (paymentref.code !== 200) {
                 console.log({ ...paymentInfo, bookingCode: `H${bookingId}` });
-                console.log(paymentref);
+                console.log(payment);
                 console.log('Payment  không thành công');
                 return;
             }

@@ -50,7 +50,7 @@ const config: PlaywrightTestConfig = {
         // baseURL: 'http://localhost:3000',
         extraHTTPHeaders: {
             // We set this header per GitHub guidelines.
-            Accept: 'application/vnd.github.v3+json',
+            Accept: 'application/json',
             ['login-token']: 'bd17ff59-2fcb-4895-8c44-7992e112158a',
             apphash: getAppHash(),
             appid: 'partner_web',

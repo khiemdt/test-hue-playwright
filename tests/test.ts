@@ -70,7 +70,7 @@ export const bookingRequest = {
     checkOut: '01-04-2023',
     children: 0,
     hotelId: 48644,
-    rooms: 1,
+    rooms: 2,
     childrenAges: [],
 };
 
